@@ -2,7 +2,7 @@ const nums = [1, -2, 3, -4, 5];
 
 function lastNegativeIndex(nums) {
   let idx = -1;
-  for (let i = nums.length; i >= 0; i--) {
+  for (let i = 0; i < nums.length; i++) { // เรียงลำดับเงื่อนไขของ loop ผิด ควรเปลี่ยนเงื่อนไขสุดท้ายเป็น i++ 
     if (nums[i] < 0) {
       idx = i;
     }
@@ -15,3 +15,4 @@ console.log(lastNegativeIndex(nums));
 // ตัวอย่างการทำงานที่ถูกต้อง
 console.log(lastNegativeIndex([1, -2, 3, -4, 5])); // 3
 console.log(lastNegativeIndex([-1, -2, -3])); // 2
+
